@@ -32,7 +32,7 @@ for i in range(20):
 moveLeft = False
 moveRight = False
 moveUP = False
-MoveDown = False
+moveDown = False
 
 MOVESPEED = 6
 
