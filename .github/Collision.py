@@ -1,4 +1,4 @@
-#Pygame Collision Detection Pratice, Brunswick Kyomari, Jan-027-22, 9:21am, 0.8
+#Pygame Collision Detection Pratice, Brunswick Kyomari, Jan-027-22, 9:28am, 0.9
 
 import pygame, sys, random
 from pygame.locals import
@@ -76,3 +76,12 @@ while True:
 
         if event.type == MOUSEBUTTONUP:
             foods.append(pygame.Rect(event.pos[0], event.pos[1]), FOODSIZE, FOODSIZE)
+
+    foodcounter += 1
+    if foodcounter => NEWFOOD:
+        # Add new food
+        foodcounter = 0
+        foods.append(pygame.Rect(random.randint(0, WINDOWWIDTH - FOODSIZE), random.randit(0, WINDOWHEIGHT - FOODSIZE), FOODSIZE, FOODSIZE))
+
+    # Draw white background on Window Surface.
+    windowSurface.fill(WHITE)
