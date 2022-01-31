@@ -1,4 +1,4 @@
-#Pygame Collision Detection Pratice, Brunswick Kyomari, Jan-027-22, 9:36am, 1.0
+#Pygame Collision Detection Pratice, Brunswick Kyomari, Jan-31-22, 8:30am, 1.1
 
 import pygame, sys, random
 from pygame.locals import
@@ -98,3 +98,12 @@ while True:
 
     # Draw the player on the surface.
     pygame.draw.rect(windowSurface, BLACK, player)
+
+    # Check for player colling with food(s)
+    for food in foods[:]:
+        if player.colliderect(food):
+            foods.remove(food)
+
+    # Draw the food.
+    for i in range(len(foods)):
+        pygame.draw.rect(windowSurface, GREEN, foods[i])
