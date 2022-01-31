@@ -1,4 +1,4 @@
-#Pygame Collision Detection Pratice, Brunswick Kyomari, Jan-31-22, 8:36am, 1.1a-BUGFIX
+#Pygame Collision Detection Pratice, Brunswick Kyomari, Jan-31-22, 8:40am, 2.0
 
 import pygame, sys, random
 from pygame.locals import
@@ -107,3 +107,7 @@ while True:
     # Draw the food.
     for i in range(len(foods)):
         pygame.draw.rect(windowSurface, GREEN, foods[i])
+
+        # Draw the window to the screen
+        pygame.display.update()
+        mainClock.tick(40)
